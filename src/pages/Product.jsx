@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Spin from '../components/Spin'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/cartSlice'
 
 function Product() {
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const { id } = useParams()
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const fetchProduct = async () => {
     setLoading(true)
@@ -28,6 +31,10 @@ function Product() {
 
   const handleAddToCart = () => {
     // add to cart logic
+    dispatch(addToCart({
+      product: product,
+      count: 1
+    }))
 
     // redirect to cart page
     navigate("/cart")
