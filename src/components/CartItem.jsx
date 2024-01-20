@@ -6,7 +6,7 @@ function CartItem({ item }) {
         <div className='cart-img'>
           <img src={item.product.image} alt={item.product.title} />
         </div>
-        <div>
+        <div className='cart-text'>
           <div>
             <h5>{item.product.title}</h5>
             <h5>Price &#x24;{item.product.price}</h5>

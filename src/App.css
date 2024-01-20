@@ -120,6 +120,12 @@
     height: 100%;
 }
 
+.cart-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .delete-container {
     display: flex;
     gap: 0.4em;
@@ -127,6 +133,7 @@
 
 .delete-icon {
     width: 18px;
+    cursor: pointer;
 }
 
 .cart-btn {
@@ -156,6 +163,16 @@
 
     .heading {
         font-size: 20px;
+    }
+
+  
+
+  }
+
+  @media (min-width: 540px) {
+    .cart-img {
+        height: 120px;
+        width: 150px;
     }
   }
 
