@@ -147,7 +147,7 @@
 
 .checkout-btn {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     margin-top: 4em;
 }
 
